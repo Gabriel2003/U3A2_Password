@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Gabriel Hurtado. 
+ * April 15th, 2018
+ * The program is called Password Generator
+ * Is a program that is used to generate a password once the user has entered the information required. 
  */
 package Password;
 
@@ -191,14 +192,22 @@ public class Program extends javax.swing.JFrame {
         // Using Strings to name certain variables as part of the algorithm. 
         String username; 
         String password; 
-        Random random = new Random();
+        Random random = new Random(); //  a random math class that will be added to the entered password. 
         int randNum = (int)Math.ceil(Math.random()*100); 
         
+        // a value has been assigned to the strings: 
         username = usernamefield.getText();
- 
         password = passwordfield.getText(); 
+        
+        // if statements used to restrict the lenght of the password:
+        if (password.length() < 8){
+        OutputLabel.setText( " Please enter a password that contains at least 8 characters "  );
+        }
+        // diplaying the password once the user has entered 8 characters: 
+       else { 
+        OutputLabel.setText( "USERNAME:    " + (username.toLowerCase()) + "       PASSWORD:    " + password + randNum );
+       }
          
-        OutputLabel.setText( "USERNAME:    " + (username.toLowerCase()) + "       PASSWORD:    " + password + randNum ); 
     }//GEN-LAST:event_GeneratebuttonActionPerformed
 
     /**
