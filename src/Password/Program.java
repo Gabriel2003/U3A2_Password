@@ -7,7 +7,7 @@ package Password;
 
 /**
  *
- * @author jorge
+ * @author gahur1962
  */
 import java.util.Random; 
 public class Program extends javax.swing.JFrame {
